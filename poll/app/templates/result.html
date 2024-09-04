@@ -1,0 +1,17 @@
+{% if question_description %}
+    <h1>{{question_description}}</h1>
+{%else%}
+    <p>No question description available</p>
+{%endif%}
+
+{% if question_choices %}
+    <ul>
+        {% for choice in question_choices %}
+        <li>{{choice.choice}} {{choice.votes}}</li>
+        {% endfor %}
+    </ul>
+{%else%}
+    <p>No choices are available</p>
+{%endif%}
+
+
