@@ -6,5 +6,5 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("detail/<int:question_id>", views.detail, name="detail"),
     path("result/<int:question_id>", views.result, name="result"),
-    path("vote/",views.form, name="vote")
+    path("vote/<int:question_id>", views.form, name="vote")
 ]
